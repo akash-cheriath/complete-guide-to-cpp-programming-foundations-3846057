@@ -14,9 +14,25 @@ struct Resource{
 
 double CalculateTotalCost(std::vector<Resource> resources){
     double result = 0.0;
+    double tax = 0.0;
     
-    // Write your code here
-    
+    for (int i=0; i< resources.size(); i++){
+        switch(resources[i].type){
+            case 'B':
+                tax = 0.05 * resources[i].baseCost;
+                break;
+            case 'L':
+                tax = 0.15 * resources[i].baseCost;
+                break;
+            case 'E':
+                tax = 0.0;
+                break;
+            default:
+                std::cout << "The entered type of the item is wrong!" << std::endl;
+        }
+
+        result += resources[i].baseCost + tax;
+    }
     return result;
 }
 
