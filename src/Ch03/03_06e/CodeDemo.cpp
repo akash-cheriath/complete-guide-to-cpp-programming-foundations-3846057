@@ -20,7 +20,7 @@ int main(){
     health_items -= 2; // Player uses some health items
 
     std::cout << "Final Ammo: " << ammo << std::endl;
-    std::cout << "Remaining Health Items: " << (int) health_items << std::endl;
+    std::cout << "Remaining Health Items: " << (int)health_items << std::endl;
 
     std::cout << std::endl << std::endl;
     return 0;
